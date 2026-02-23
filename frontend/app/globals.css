@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html,
+body {
+  @apply min-h-screen bg-slate-950 text-slate-100 antialiased;
+}
+
+body.light {
+  @apply bg-slate-100 text-slate-900;
+}
+
+.app-shell {
+  @apply mx-auto w-full max-w-7xl px-4 py-6 sm:px-6 lg:px-8;
+}
+
+.panel {
+  @apply rounded-2xl border border-slate-800 bg-slate-900/70 p-5 shadow-lg shadow-black/20;
+}
+
+body.light .panel {
+  @apply border-slate-200 bg-white;
+}
+
+.input {
+  @apply w-full rounded-xl border border-slate-700 bg-slate-950 px-3 py-2 text-sm text-slate-100 outline-none transition focus:border-brand-500 focus:ring-2 focus:ring-brand-500/30;
+}
+
+body.light .input {
+  @apply border-slate-300 bg-white text-slate-900;
+}
+
+.button-primary {
+  @apply inline-flex items-center justify-center rounded-xl bg-brand-600 px-4 py-2 text-sm font-semibold text-white transition hover:bg-brand-500 disabled:cursor-not-allowed disabled:opacity-50;
+}
+
+.button-secondary {
+  @apply inline-flex items-center justify-center rounded-xl border border-slate-700 bg-slate-900 px-4 py-2 text-sm font-semibold text-slate-100 transition hover:bg-slate-800 disabled:cursor-not-allowed disabled:opacity-50;
+}
+
+body.light .button-secondary {
+  @apply border-slate-300 bg-white text-slate-900 hover:bg-slate-100;
+}
